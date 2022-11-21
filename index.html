@@ -1,0 +1,102 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/style.css">
+        <title>Рюземе</title>
+        <style>
+            
+        </style>
+    </head> 
+    <body>
+        <div>
+    
+<div id="current_date_time_block"></div>
+
+<script type="text/javascript">
+    
+    /* функция добавления ведущих нулей */
+    /* (если число меньше десяти, перед числом добавляем ноль) */
+    function zero_first_format(value)
+    {
+        if (value < 10)
+        {
+            value='0'+value;
+        }
+        return value;
+    }
+
+    /* функция получения текущей даты и времени */
+    function date_time()
+    {
+        var current_datetime = new Date();
+        var day = zero_first_format(current_datetime.getDate());
+        var month = zero_first_format(current_datetime.getMonth()+1);
+        var year = current_datetime.getFullYear();
+        var hours = zero_first_format(current_datetime.getHours());
+        var minutes = zero_first_format(current_datetime.getMinutes());
+        var seconds = zero_first_format(current_datetime.getSeconds());
+
+        return day+"."+month+"."+year+" "+hours+":"+minutes+":"+seconds;
+    }
+
+    /* выводим текущую дату и время на сайт в блок с id "current_date_time_block" */
+    document.getElementById('current_date_time_block').innerHTML = date_time();
+</script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js">
+        </script>
+        <script src = "js/button.js"></script>
+            <div> 
+              <h1 class="zagolovki">Cвязист первого класс</h1>
+            </div>
+          <div>
+              
+            <a class="zagolovki" href="#sebe">О себе </a>
+            <a class="zagolovki" href="#hob">Хобби</a>
+            <a class="zagolovki" href="#ym">Умения </a>
+            <a class="zagolovki" href="#Dos">Достижения</a>
+            <a class="zagolovki" href="#kont">Контакты</a>
+        </div>
+        
+        <div class ="card">
+            <div class ="text-crd">
+                <h1 class="title-crd">О себе <a name="sebe"></a> </h1>
+               <p class ="text2-crd">Меня зовут Чуркин Владислав Александрович студент 4 курса информационные системы и програмирование,мне 
+                   20 лет родился в городе Кирове </p>
+            </div>
+            <div class="blok-photo">
+                <img class="photo" src="foto.jpg" alt="Vlad">
+            </div>
+        </div>
+        
+        <div class="main">
+         <div class="cardleft">
+            <h1 class="title-crd">Хобби <a name="hob"></a></h1>
+            <p class="text2-crd">В не учебы я играю приставку и выбиваю платины,но так же очень сильно люблю  читаю книги.</p>
+            <p class="text2-crd">Также  хожу  на плавание  и в  зал,но и гуляю с друзьями</p>
+             <img class="photo-proektov" src="trof.jpg" alt="trofei">
+         </div>
+            <div class="cardright">
+            <h1 class="title-crd">Умения <a name="ym"></a></h1>  
+        <p class="text2-crd">Figma,С++,С#,CSS,Java,html</p>
+         </div>
+        </div> 
+        
+        <div class="Proekti"> 
+            <h1 class="title-crd">Достижения  <a name="Dos"></a> </h1>
+            <h2 class="text3-crd">В течение 4 курсов у меня были разработаны два проекта не включая этот</h2>
+            <p class="text2-crd"> Первый проект  разрабатывался юр.помощник по юр. вопросам в командах  на третьем курсе,суть проекта заключается в том чтобы пользователь задавал вопросы ему,а  в это время он находил ответы интересующие пользователя </p>
+            <img class="photo-proektov" src="1c.png" alt="1с">
+            <p class="text2-crd">Второй проект это был разработан на втором курсе игра "Змейка" суть заключалась в том чтобы пользователь зашёл и поиграл в неё и расслабился</p>
+            <img class="photo-proektov" src="snake2.jpg" alt="snake">
+        </div>   
+        
+        <div class="flutter">
+            <p class ="text4-crd">Телефон: <a  class ="text4-crd" href="tel:+79123314003">+79123314003</a>
+            <a name="kont"></a></p>
+            <p class ="text4-crd">Vk: <a class ="text4-crd"  href="https://vk.com/id299538739">vk.com/id299538739</a></p>
+            <p class ="text4-crd">Git: <a class ="text4-crd"  href="https://github.com/vlad021105">github.com/vlad021105</a></p>
+        </div>
+    </div>
+    </body>
+</html>
